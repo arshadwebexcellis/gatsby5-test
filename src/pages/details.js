@@ -54,7 +54,6 @@ const UserDetailPage = () => {
       );
       const data = await response.json();
       setUserData(data);
-      document.title = `Auction Detail: ${data.title}`;
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
@@ -78,4 +77,3 @@ const UserDetailPage = () => {
 };
 
 export default UserDetailPage;
-export const Head = () => <SEO />;

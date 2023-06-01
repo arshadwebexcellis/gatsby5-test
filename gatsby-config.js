@@ -1,6 +1,3 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
     title: `Gatsby 5 seo test`,
@@ -9,5 +6,16 @@ module.exports = {
     image: `/gatsby-icon.png`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    // Other plugins
+    {
+      resolve: "gatsby-source-mongodb",
+      options: {
+        connectionString:
+          "mongodb+srv://salvexCustomerApi:8GWkhmTaTNwDCNBF@salvexdev.byeuw8i.mongodb.net/salvexCustomer",
+        dbName: "salvexCustomer",
+        collection: "auctions",
+      },
+    },
+  ],
 };

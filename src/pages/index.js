@@ -59,9 +59,13 @@ const BorderedTable = () => {
 
   const fetchData = async () => {
     try {
-      document.title = "Auction List";
       const response = await fetch(
-        `https://dpsx4xxmntql7.cloudfront.net/api/archive/list?page=${currentPage}&q=${searchQuery}&category=Aviation`
+        `https://dpsx4xxmntql7.cloudfront.net/api/archive/list?page=${currentPage}&q=${searchQuery}&category=Aviation`,
+        {
+          headers: {
+            "X-Api-Key": "4dxa0Xndty6jPT8kD19uM7Tb4MKk0c81aD7G3aEq",
+          },
+        }
       );
       const result = await response.json();
       console.log(result);
@@ -99,7 +103,7 @@ const BorderedTable = () => {
           {data.map((row) => (
             <tr key={row._id}>
               <TableCell>
-                <Link to={`/details?id=${row._id}`}>{row._id}</Link>
+                <Link to={`/products/${row._id}`}>{row._id}</Link>
               </TableCell>
               <TableCell>{row.title}</TableCell>
               <TableCell>
@@ -125,5 +129,10 @@ const BorderedTable = () => {
 };
 
 export default BorderedTable;
-
-export const Head = () => <SEO />;
+export const Head = ({ location }) => (
+  <SEO
+    title={"Archive List"}
+    description={"Archive List"}
+    location={location}
+  />
+);
