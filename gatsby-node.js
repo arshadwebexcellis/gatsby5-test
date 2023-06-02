@@ -17,7 +17,6 @@ exports.createPages = async ({ graphql, actions }) => {
             city
             categorySlug
             categoryId
-            category
             mongodb_id
           }
         }
@@ -28,7 +27,6 @@ exports.createPages = async ({ graphql, actions }) => {
   if (productData.errors) {
     throw new Error(productData.errors);
   }
-
   // Create individual product pages
   const products = productData.data.allMongodbSalvexCustomerAuctions.edges;
 
