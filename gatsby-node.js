@@ -9,15 +9,12 @@ exports.createPages = async ({ graphql, actions }) => {
       allMongodbSalvexCustomerAuctions {
         edges {
           node {
-            id
-            title
-            endDate
-            createdAt
-            country
-            city
-            categorySlug
-            categoryId
+            primaryPicture
             mongodb_id
+            categorySlug
+            quantity
+            unit
+            traderCompany
           }
         }
       }

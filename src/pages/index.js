@@ -60,7 +60,7 @@ const BorderedTable = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://dpsx4xxmntql7.cloudfront.net/api/archive/list?page=${currentPage}&q=${searchQuery}&category=Aviation`,
+        `https://dpsx4xxmntql7.cloudfront.net/api/archive/list?page=${currentPage}&q=${searchQuery}&category=marine`,
         {
           headers: {
             "X-Api-Key": "4dxa0Xndty6jPT8kD19uM7Tb4MKk0c81aD7G3aEq",
