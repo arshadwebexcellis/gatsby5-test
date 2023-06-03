@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
             quantity
             unit
             traderCompany
+            title
           }
         }
       }
