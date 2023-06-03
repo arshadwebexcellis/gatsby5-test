@@ -29,6 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const products = productData.data.allMongodbSalvexCustomerAuctions.edges;
 
   products.forEach(({ node }) => {
+    console.log(`/products/${node.mongodb_id}`, node);
     createPage({
       path: `/products/${node.mongodb_id}`,
       component: path.resolve("./src/templates/Product.js"),
