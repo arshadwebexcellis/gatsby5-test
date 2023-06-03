@@ -35,11 +35,12 @@ const Product = ({ pageContext }) => {
                           <li class="breadcrumb-item">
                             <a href="#!">All Listings</a>
                           </li>
-                          {pageContext.categorySlug.split(" > ").map((cat) => (
-                            <li class="breadcrumb-item">
-                              <a href="#!">{cat}</a>
-                            </li>
-                          ))}
+                          {pageContext.categorySlug &&
+                            pageContext.categorySlug.split(" > ").map((cat) => (
+                              <li class="breadcrumb-item">
+                                <a href="#!">{cat}</a>
+                              </li>
+                            ))}
                         </ol>
                       </div>
                       <div class="product-heading-box d-flex align-items-start justify-content-between">
