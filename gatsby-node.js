@@ -9,6 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allMongodbSalvexCustomerAuctions {
         edges {
           node {
+            id
             primaryPicture
             mongodb_id
             categorySlug
