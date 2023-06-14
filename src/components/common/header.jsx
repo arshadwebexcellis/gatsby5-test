@@ -1,6 +1,5 @@
+import { Link } from "gatsby";
 import React from "react";
-import logo from "../../include/images/logo.svg";
-import salvexLogo from "../../include/images/salvex-logo.svg";
 
 const Header = () => {
   return (
@@ -139,8 +138,8 @@ const Header = () => {
           <div class="container-fluid">
             <div class="nav-inside position-relative flex-wrap d-flex align-items-center">
               <a class="navbar-brand" href="#!">
-                <img class="d-none d-lg-block" src={logo} alt="" />
-                <img class="d-block d-lg-none" src={salvexLogo} alt="" />
+                <img class="d-none d-lg-block" src={"logo"} alt="" />
+                <img class="d-block d-lg-none" src={"salvexLogo"} alt="" />
               </a>
               <button
                 class="nav-icon"
@@ -159,9 +158,9 @@ const Header = () => {
                 <div class="navbar-inside ml-auto">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link" href="#!">
+                      <Link class="nav-link" to="/categories">
                         Categories
-                      </a>
+                      </Link>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#!">

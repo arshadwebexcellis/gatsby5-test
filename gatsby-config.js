@@ -14,7 +14,12 @@ module.exports = {
         connectionString:
           "mongodb+srv://salvexCustomerApi:8GWkhmTaTNwDCNBF@salvexdev.byeuw8i.mongodb.net/salvexCustomer",
         dbName: "salvexCustomer",
-        collection: "auctions",
+        collection: [
+          "auctions",
+          "categorylists",
+          "categorymetadatas",
+          "topcategorylists",
+        ],
       },
     },
   ],
